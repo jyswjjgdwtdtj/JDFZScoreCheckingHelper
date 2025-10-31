@@ -1,0 +1,29 @@
+{
+	"manifest_version": 3,
+	"name": "交大附中看成绩助手",
+	"version": "0.0.1",
+	"description": "秒看成绩",
+	"icons":
+	{
+		"16": "icon.png",
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://fz.sjtu.edu.cn/jwxx/student/index/index.html"],
+			"js": ["content-script.js"],
+			"run_at": "document_start"
+		}
+	],
+	"permissions":
+	[
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"http://*/*",
+		"https://*/*"
+	],
+	"homepage_url": "https://github.com/jyswjjgdwtdtj/JDFZScoreCheckingHelper"
+}
